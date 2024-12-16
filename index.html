@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hai There Nish ;b</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Press Start 2P', cursive;
+            background: #ffe4e6;
+            color: #333;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            margin-top: 50px;
+            font-size: 24px;
+            color: #d81b60;
+        }
+
+        .scroll-hint {
+            margin: 20px 0;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .spacer {
+            height: 300px;
+        }
+
+        .envelope-wrapper {
+            margin-top: 100px;
+            position: relative;
+            width: 800px;
+            height: 600px;
+            margin: 100px auto;
+            perspective: 1000px;
+        }
+
+        .envelope {
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            position: relative;
+            border-radius: 10px;
+            cursor: pointer;
+            transform-style: preserve-3d;
+            transform: rotateX(0deg);
+            transition: transform 0.6s ease;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .envelope .flap {
+            position: absolute;
+            width: 100%;
+            height: 50%;
+            background: #f06292;
+            top: 0;
+            border-radius: 10px 10px 0 0;
+            transform-origin: bottom;
+            transform: rotateX(-180deg);
+            transition: transform 0.6s ease;
+        }
+
+        .envelope.open .flap {
+            transform: rotateX(0deg);
+        }
+
+        .envelope .base {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            border-radius: 10px;
+        }
+
+        .text-area-wrapper {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            color: #fff;
+            overflow-y: auto; /* Allows scrolling for long text */
+            box-sizing: border-box;
+        }
+
+        .envelope.open + .text-area-wrapper {
+            display: flex;
+        }
+
+        .text-area-wrapper p {
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 0;
+            text-align: left; /* Align text to the left for better readability */
+            word-wrap: break-word;
+        }
+
+        .anniversary {
+            margin-top: 50px;
+            font-size: 18px;
+            color: #d81b60;
+        }
+
+        /* Responsive styling for smaller screens */
+        @media (max-width: 768px) {
+            .envelope-wrapper {
+                width: 90%;
+                height: 500px;
+            }
+
+            .text-area-wrapper p {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Hai There Nish ;b</h1>
+    <p class="scroll-hint">Scroll down to see a surprise!</p>
+
+    <div class="spacer"></div>
+
+    <div class="envelope-wrapper">
+        <div class="envelope">
+            <div class="flap"></div>
+            <div class="base"></div>
+        </div>
+        <div class="text-area-wrapper">
+            <p>
+                Two months ago, I honestly had no idea how much my life was about to change. I feel like in such a short time, I’ve experienced more happiness, love, and excitement than I ever imagined possible. The moment you came into my life, everything just felt so right. I’ve never met anyone like you before, and every single day I spend with you just reminds me how incredibly lucky I am. You make me feel things I didn’t even know I was capable of feeling, and honestly, I just can’t get enough of it. I love how you always know exactly how to make me laugh, even on my worst days, and how just being with you feels like everything is going to be okay. It’s crazy how easy it is to be with you, and how we’ve created so many little inside jokes and memories in such a short time. I love the way you look at me like I’m the only one in the world, and how when we talk, it feels like no one else matters. You make me feel so special, and I just know that we’re meant to be doing this together. These two months have been absolutely amazing, and I feel like I’ve learned so much about you, and about us. It’s crazy how close we’ve gotten so quickly, and I’m honestly so thankful for every second of it. Whether we’re having deep conversations about life or just goofing around and being silly, every moment with you feels like a blessing. I love how you’re always there to support me, and how you make me feel like I can truly be myself without any judgment. There’s just this comfort in being with you that I can’t explain, and it’s the best feeling in the world. Every time I see you, my heart just skips a beat, and I find myself smiling uncontrollably. I can’t believe how perfect everything feels, and I’m so excited for all the adventures and memories we still have ahead of us. Honestly, these two months have been some of the best of my life, and I’m so happy to have you by my side. I can’t wait to see what’s next for us, but whatever it is, I know I want to experience it all with you. You mean more to me than words could ever describe, and I’m so thankful for every moment we’ve spent together so far. I love you. </p>
+        </div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <p class="anniversary">Happy anniversary :3</p>
+
+    <script>
+        const envelope = document.querySelector('.envelope');
+        const textAreaWrapper = document.querySelector('.text-area-wrapper');
+
+        envelope.addEventListener('click', () => {
+            envelope.classList.add('open');
+        });
+    </script>
+</body>
+</html>
